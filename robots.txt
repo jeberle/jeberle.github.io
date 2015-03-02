@@ -1,0 +1,6 @@
+# /robots.txt file for http://fastnlight.com
+
+User-agent: *
+Disallow: 
+Sitemap: http://fastnlight.com/sitemap.xml
+

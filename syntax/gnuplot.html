@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>gnuplot.vim</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="en" />
+    <link href="/css/site.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/css/pygments.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel='icon' href='/favicon.gif' type='image/gif'/>
+  </head>
+  <body>
+  <div id='main'>
+    <a href='/'><img class='logo' src='/fastnlight-logo.png' alt='FastnLight Logo'></a>
+    <article class="markdown-body">
+    <p><a href="gnuplot.vim">gnuplot.vim</a></p>
+
+<div class="highlight"><pre><code class="vim"><span class="c">&quot; Vim syntax file</span>
+<span class="c">&quot; Language:    Gnuplot</span>
+<span class="c">&quot; Maintainer:  Jim Eberle &lt;jim.eberle@fastnlight.com&gt;</span>
+<span class="c">&quot; Last Change: Dec 21, 2006</span>
+<span class="c">&quot; URL:         http://www.fastnlight.com/syntax/gnuplot.vim</span>
+
+<span class="c">&quot; Use :syn w/in a buffer to see language element breakdown</span>
+
+<span class="k">if</span> <span class="k">version</span> <span class="p">&lt;</span> <span class="m">600</span>
+  <span class="nb">syntax</span> clear
+<span class="k">elseif</span> exists<span class="p">(</span><span class="s2">&quot;b:current_syntax&quot;</span><span class="p">)</span>
+  <span class="k">finish</span>
+<span class="k">endif</span>
+
+<span class="c">&quot; --- Statement ---</span>
+<span class="k">syn</span> keyword plotStmt <span class="k">cd</span> <span class="k">call</span> clear <span class="k">exit</span> fit <span class="k">if</span> help <span class="k">history</span> <span class="k">load</span>
+<span class="k">syn</span> keyword plotStmt pause plot print <span class="k">pwd</span> quit replot reread
+<span class="k">syn</span> keyword plotStmt reset <span class="k">save</span> <span class="k">set</span> <span class="k">shell</span> show splot system
+<span class="k">syn</span> keyword plotStmt test unset <span class="k">update</span>
+<span class="k">hi</span> <span class="nb">def</span> link plotStmt Statement
+
+<span class="c">&quot; --- Option ---</span>
+<span class="k">syn</span> keyword plotOption angles arrow autoscale bars boxwidth clabel
+<span class="k">syn</span> keyword plotOption clip cntrparam colorbox contour decimalsign
+<span class="k">syn</span> keyword plotOption dgrid3d dummy <span class="nb">encoding</span> fit format grid
+<span class="k">syn</span> keyword plotOption historysize isosamples <span class="nb">key</span> <span class="k">locale</span> logscale
+<span class="k">syn</span> keyword plotOption mapping <span class="nb">mouse</span> multiplot offsets origin output
+<span class="k">syn</span> keyword plotOption palette parametric pm3d polar print
+<span class="k">syn</span> keyword plotOption samples style surface terminal ticscale
+<span class="k">syn</span> keyword plotOption ticslevel timestamp timefmt <span class="nb">title</span> <span class="k">view</span> zero
+<span class="k">syn</span> keyword plotOption zeroaxis label tics margin
+<span class="k">syn</span> <span class="k">match</span>   plotOption <span class="s2">&quot;[xyz]2\?range&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOption <span class="s2">&quot;[xyz]2\?data&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOption <span class="s2">&quot;[xyz]2\?label&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOption <span class="s2">&quot;[xyz]2\?zeroaxis&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOption <span class="s2">&quot;[rtuv]range&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOption <span class="s2">&quot;[blrt]margin&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOption <span class="s2">&quot;\(no\)\?m\?[xyz]2\?tics&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOption <span class="s2">&quot;\(no\)\?m\?cbtics&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOption <span class="s2">&quot;[xyz]2\?[md]tics&quot;</span>
+<span class="k">syn</span> keyword plotOption cbtics cblabel cbrange cbdata
+<span class="k">syn</span> keyword plotOption cbdtics cbmtics 
+<span class="k">hi</span> <span class="nb">def</span> link plotOption Identifier
+
+<span class="c">&quot; --- Operator ---</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOp <span class="s2">&quot;[-+*/^|&amp;?:]&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOp <span class="s2">&quot;\*\*&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOp <span class="s2">&quot;&amp;&amp;&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotOp <span class="s2">&quot;||&quot;</span>
+<span class="k">hi</span> <span class="nb">def</span> link plotOp Operator
+
+<span class="c">&quot; --- Function ---</span>
+<span class="k">syn</span> keyword plotFn abs abs acos <span class="k">arg</span> asin atan besj0 besj1
+<span class="k">syn</span> keyword plotFn besy0 besy1 ceil cos cosh erf erfc exp
+<span class="k">syn</span> keyword plotFn floor gamma ibeta igamma imag int lgamma
+<span class="k">syn</span> keyword plotFn log log10 rand real sgn sin sinh sqrt tan tanh
+<span class="k">hi</span> <span class="nb">def</span> link plotFn Function
+
+<span class="c">&quot; --- String ---</span>
+<span class="k">syn</span> region  plotString <span class="k">start</span><span class="p">=+</span><span class="s2">&quot;+ skip=+\\\\\|\\&quot;</span><span class="p">+</span> <span class="k">end</span><span class="p">=+</span>&quot;<span class="p">+</span>
+<span class="k">syn</span> region  plotString <span class="k">start</span><span class="p">=+</span><span class="s1">&#39;+ skip=+\\\\\|\\&#39;</span><span class="p">+</span> <span class="k">end</span><span class="p">=+</span>&#39;<span class="p">+</span>
+<span class="k">hi</span> <span class="nb">def</span> link plotString String
+
+<span class="c">&quot; --- Number ---</span>
+<span class="k">syn</span> <span class="k">match</span>   plotNumber <span class="s2">&quot;\&lt;-\?\d\+\&gt;&quot;</span>
+<span class="k">hi</span> <span class="nb">def</span> link plotNumber Number
+
+<span class="c">&quot; --- Float ---</span>
+<span class="k">syn</span> <span class="k">match</span>   plotFloat <span class="nb">display</span> contained <span class="s2">&quot;\d\+\.\d*\(e[-+]\=\d\+\)\=&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotFloat <span class="nb">display</span> contained <span class="s2">&quot;\.\d\+\(e[-+]\=\d\+\)\=\&gt;&quot;</span>
+<span class="k">syn</span> <span class="k">match</span>   plotFloat <span class="nb">display</span> contained <span class="s2">&quot;\d\+e[-+]\&gt;&quot;</span>
+<span class="k">hi</span> <span class="nb">def</span> link plotFloat Float
+
+<span class="c">&quot; --- Constant Pair ---</span>
+<span class="k">syn</span> keyword plotPair border noborder
+<span class="k">syn</span> keyword plotPair labels nolabels
+<span class="k">syn</span> keyword plotPair autotitles noautotitles
+<span class="k">syn</span> keyword plotPair filled nofilled
+<span class="k">syn</span> keyword plotPair offset nooffset
+<span class="k">syn</span> keyword plotPair undefined noundefined 
+<span class="k">syn</span> keyword plotPair reverse noreverse
+<span class="k">syn</span> keyword plotPair ratio noratio
+<span class="k">syn</span> keyword plotPair head nohead
+<span class="k">syn</span> keyword plotPair rotate norotate
+<span class="k">syn</span> keyword plotPair point nopoint 
+<span class="k">syn</span> keyword plotPair box nobox
+<span class="k">syn</span> keyword plotPair square nosquare
+<span class="k">syn</span> keyword plotPair mirror nomirror
+<span class="k">syn</span> keyword plotPair <span class="k">verbose</span> noverbose
+<span class="k">syn</span> keyword plotPair altdiagonal noaltdiagonal 
+<span class="k">syn</span> keyword plotPair ftriangles noftriangles
+<span class="k">syn</span> keyword plotPair hidden3d nohidden3d
+<span class="k">syn</span> keyword plotPair bentover nobentover
+<span class="k">syn</span> keyword plotPair enhanced noenhanced
+<span class="k">syn</span> keyword plotPair doubleclick nodoubleclick
+<span class="k">syn</span> keyword plotPair zoomjump nozoomjump
+<span class="k">syn</span> keyword plotPair zoomcoordinates nozoomcoordinates
+<span class="k">syn</span> keyword plotPair polardistance nopolardistance
+<span class="k">syn</span> keyword plotPair errorvariables noerrorvariables
+<span class="k">syn</span> keyword plotPair ps_allcF nops_allcF
+<span class="k">syn</span> keyword plotPair writeback nowriteback
+<span class="k">hi</span> <span class="nb">def</span> link plotPair plotConst
+
+<span class="c">&quot; --- Constant ---</span>
+<span class="k">syn</span> keyword plotConst <span class="nb">pi</span>
+<span class="k">syn</span> keyword plotConst degrees radians 
+<span class="k">syn</span> keyword plotConst default restore user
+<span class="k">syn</span> keyword plotConst <span class="k">left</span> <span class="k">right</span> <span class="k">center</span> <span class="k">top</span> bottom outside <span class="k">below</span> Left Right
+<span class="k">syn</span> keyword plotConst front back layerdefault
+<span class="k">syn</span> keyword plotConst tiny small medium large giant size
+<span class="k">syn</span> keyword plotConst absolute relative 
+<span class="k">syn</span> keyword plotConst <span class="k">vertical</span> horizontal
+<span class="k">syn</span> keyword plotConst min max fixmin fixmax <span class="k">fix</span> keepfix
+<span class="k">syn</span> keyword plotConst <span class="k">on</span> off begin <span class="k">end</span> <span class="k">in</span> out push <span class="k">pop</span>
+<span class="k">syn</span> keyword plotConst zero one two
+<span class="k">syn</span> keyword plotConst empty solid pattern 
+<span class="k">syn</span> keyword plotConst linear cubicspline bspline 
+<span class="k">syn</span> keyword plotConst bdefault base both 
+<span class="k">syn</span> keyword plotConst iso_8859_1 iso_8859_2 iso_8859_15 cp850 cp852 cp437 koi8r
+<span class="k">syn</span> keyword plotConst cartesian spherical cylindrical
+<span class="k">syn</span> keyword plotConst gray <span class="k">color</span> positive negative
+<span class="k">syn</span> keyword plotConst fill line 
+<span class="k">syn</span> keyword plotConst linestyle <span class="k">ls</span>
+<span class="k">syn</span> keyword plotConst linetype <span class="k">lt</span>
+<span class="k">syn</span> keyword plotConst linewidth <span class="k">lw</span>
+<span class="k">syn</span> keyword plotConst pointtype <span class="nb">pt</span> 
+<span class="k">syn</span> keyword plotConst pointsize <span class="k">ps</span>
+<span class="k">syn</span> keyword plotConst textcolor <span class="k">tc</span>
+<span class="k">syn</span> keyword plotConst xy xz yz xyz
+<span class="k">syn</span> keyword plotConst clipboardformat mouseformat
+<span class="k">syn</span> keyword plotConst trianglepattern labeloptions
+<span class="k">syn</span> keyword plotConst heads arrowstyle <span class="k">as</span> rto
+<span class="k">syn</span> keyword plotConst boxes filledcurves financebars candlesticks
+<span class="k">syn</span> keyword plotConst boxerrorbars boxxyerrorbars xerrorbars xerrorlines
+<span class="k">syn</span> keyword plotConst xyerrorbars xyerrorlines yerrorbars yerrorlines 
+<span class="k">syn</span> keyword plotConst dots fsteps histeps impulses <span class="nb">lines</span> linespoints steps
+<span class="k">syn</span> keyword plotConst points vectors
+<span class="k">syn</span> keyword plotConst <span class="nb">binary</span> matrix axis autofreq
+<span class="k">syn</span> keyword plotConst loadpath fontpath logfile datafile <span class="k">file</span>
+<span class="k">syn</span> keyword plotConst scansautomatic scansbackward scansforward separator
+<span class="k">syn</span> keyword plotConst corners2color mean median geomean
+<span class="k">syn</span> keyword plotConst clip1in clip4in c1 c2 c3 c4
+<span class="k">syn</span> keyword plotConst flush implicit explicit
+<span class="k">syn</span> keyword plotConst order auto levels discrete incremental
+<span class="k">syn</span> keyword plotConst closed commentschars
+<span class="k">syn</span> keyword plotConst data defined
+<span class="k">syn</span> keyword plotConst font <span class="k">function</span> functions height width
+<span class="k">syn</span> keyword plotConst map maxcolors missing model
+<span class="k">syn</span> keyword plotConst rgbformulae samplen spacing
+<span class="k">hi</span> <span class="nb">def</span> link plotConst Constant
+
+<span class="c">&quot; --- Keyword ---</span>
+<span class="k">syn</span> keyword plotKW <span class="k">all</span> using <span class="k">index</span> every
+<span class="k">syn</span> keyword plotKW at by from <span class="k">to</span> with
+<span class="k">syn</span> keyword plotKW <span class="k">x</span> <span class="k">y</span> z
+<span class="k">hi</span> <span class="nb">def</span> link plotKW Keyword
+
+<span class="c">&quot; --- Comment ---</span>
+<span class="k">syn</span> <span class="k">match</span>   plotComment <span class="s2">&quot;#.*&quot;</span>
+<span class="k">hi</span> <span class="nb">def</span> link plotComment Comment
+
+<span class="c">&quot; --- Todo ---</span>
+<span class="k">syn</span> keyword plotTodo contained TODO FIXME XXX
+<span class="k">hi</span> <span class="nb">def</span> link plotTodo Todo
+
+<span class="k">let</span> <span class="k">b</span>:current_syntax <span class="p">=</span> <span class="s2">&quot;gnuplot&quot;</span>
+</code></pre></div>
+
+
+
+
+    </article>
+  </div>
+  </body>
+</html>

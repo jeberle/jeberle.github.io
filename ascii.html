@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ASCII</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="en" />
+    <link href="/css/site.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/css/pygments.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel='icon' href='/favicon.gif' type='image/gif'/>
+  </head>
+  <body>
+  <div id='main'>
+    <a href='/'><img class='logo' src='/fastnlight-logo.png' alt='FastnLight Logo'></a>
+    <article class="markdown-body">
+    <style>
+.label {
+  margin-left: 1em;
+  width: 2em;
+}
+.value {
+  width: 3em;
+  text-align: right;
+}
+.label, .value {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+.ctrl {
+  text-align: left;
+}
+td {
+  white-space: pre;
+  text-align: center;
+  cursor: default;
+}
+td, .label, .value {
+  font-family: Courier, monospace;
+  font-size: 14px;
+}
+</style>
+
+<script>
+function u(e, n) {
+  document.getElementById('hex').innerText = '0x'+n.toString(16);
+  document.getElementById('oct').innerText = '0'+n.toString(8);
+  document.getElementById('dec').innerText = n.toString(10);
+  e.style.background = '#ddd';
+  last.style.background = '#fff';
+  last = e;
+}
+function c() {
+  document.getElementById('hex').innerText = '--';
+  document.getElementById('oct').innerText = '--';
+  document.getElementById('dec').innerText = '--';
+  last.style.background = '#fff';
+}
+</script>
+
+<p>
+<div class='label'>Hex: </div><div id='hex' class='value'>--</div>
+<div class='label'>Oct: </div><div id='oct' class='value'>--</div>
+<div class='label'>Dec: </div><div id='dec' class='value'>--</div>
+</p>
+<div class='clear'></div>
+
+<table id='ascii' onmouseout='c()'>
+<tr><td class='ctrl' onmouseover='u(this,0x00)'>NUL ^@   </td><td class='ctrl' onmouseover='u(this,0x10)'>DLE ^P   </td><td onmouseover='u(this,0x20)'>  SP </td><td onmouseover='u(this,0x30)'>  0  </td><td onmouseover='u(this,0x40)'>  @  </td><td onmouseover='u(this,0x50)'>  P  </td><td onmouseover='u(this,0x60)'>  `  </td><td onmouseover='u(this,0x70)'>  p  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x01)'>SOH ^A   </td><td class='ctrl' onmouseover='u(this,0x11)'>DC1 ^Q   </td><td onmouseover='u(this,0x21)'>  !  </td><td onmouseover='u(this,0x31)'>  1  </td><td onmouseover='u(this,0x41)'>  A  </td><td onmouseover='u(this,0x51)'>  Q  </td><td onmouseover='u(this,0x61)'>  a  </td><td onmouseover='u(this,0x71)'>  q  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x02)'>STX ^B   </td><td class='ctrl' onmouseover='u(this,0x12)'>DC2 ^R   </td><td onmouseover='u(this,0x22)'>  "  </td><td onmouseover='u(this,0x32)'>  2  </td><td onmouseover='u(this,0x42)'>  B  </td><td onmouseover='u(this,0x52)'>  R  </td><td onmouseover='u(this,0x62)'>  b  </td><td onmouseover='u(this,0x72)'>  r  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x03)'>ETX ^C   </td><td class='ctrl' onmouseover='u(this,0x13)'>DC3 ^S   </td><td onmouseover='u(this,0x23)'>  #  </td><td onmouseover='u(this,0x33)'>  3  </td><td onmouseover='u(this,0x43)'>  C  </td><td onmouseover='u(this,0x53)'>  S  </td><td onmouseover='u(this,0x63)'>  c  </td><td onmouseover='u(this,0x73)'>  s  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x04)'>EOT ^D   </td><td class='ctrl' onmouseover='u(this,0x14)'>DC4 ^T   </td><td onmouseover='u(this,0x24)'>  $  </td><td onmouseover='u(this,0x34)'>  4  </td><td onmouseover='u(this,0x44)'>  D  </td><td onmouseover='u(this,0x54)'>  T  </td><td onmouseover='u(this,0x64)'>  d  </td><td onmouseover='u(this,0x74)'>  t  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x05)'>ENQ ^E   </td><td class='ctrl' onmouseover='u(this,0x15)'>NAK ^U   </td><td onmouseover='u(this,0x25)'>  %  </td><td onmouseover='u(this,0x35)'>  5  </td><td onmouseover='u(this,0x45)'>  E  </td><td onmouseover='u(this,0x55)'>  U  </td><td onmouseover='u(this,0x65)'>  e  </td><td onmouseover='u(this,0x75)'>  u  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x06)'>ACK ^F   </td><td class='ctrl' onmouseover='u(this,0x16)'>SYN ^V   </td><td onmouseover='u(this,0x26)'>&amp;</td><td onmouseover='u(this,0x36)'>  6  </td><td onmouseover='u(this,0x46)'>  F  </td><td onmouseover='u(this,0x56)'>  V  </td><td onmouseover='u(this,0x66)'>  f  </td><td onmouseover='u(this,0x76)'>  v  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x07)'>BEL ^G \a</td><td class='ctrl' onmouseover='u(this,0x17)'>ETB ^W   </td><td onmouseover='u(this,0x27)'>  '  </td><td onmouseover='u(this,0x37)'>  7  </td><td onmouseover='u(this,0x47)'>  G  </td><td onmouseover='u(this,0x57)'>  W  </td><td onmouseover='u(this,0x67)'>  g  </td><td onmouseover='u(this,0x77)'>  w  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x08)'>BS  ^H \b</td><td class='ctrl' onmouseover='u(this,0x18)'>CAN ^X   </td><td onmouseover='u(this,0x28)'>  (  </td><td onmouseover='u(this,0x38)'>  8  </td><td onmouseover='u(this,0x48)'>  H  </td><td onmouseover='u(this,0x58)'>  X  </td><td onmouseover='u(this,0x68)'>  h  </td><td onmouseover='u(this,0x78)'>  x  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x09)'>HT  ^I \t</td><td class='ctrl' onmouseover='u(this,0x19)'>EM  ^Y   </td><td onmouseover='u(this,0x29)'>  )  </td><td onmouseover='u(this,0x39)'>  9  </td><td onmouseover='u(this,0x49)'>  I  </td><td onmouseover='u(this,0x59)'>  Y  </td><td onmouseover='u(this,0x69)'>  i  </td><td onmouseover='u(this,0x79)'>  y  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x0a)'>LF  ^J \n</td><td class='ctrl' onmouseover='u(this,0x1a)'>SUB ^Z   </td><td onmouseover='u(this,0x2a)'>  *  </td><td onmouseover='u(this,0x3a)'>  :  </td><td onmouseover='u(this,0x4a)'>  J  </td><td onmouseover='u(this,0x5a)'>  Z  </td><td onmouseover='u(this,0x6a)'>  j  </td><td onmouseover='u(this,0x7a)'>  z  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x0b)'>VT  ^K \v</td><td class='ctrl' onmouseover='u(this,0x1b)'>ESC ^[ \e</td><td onmouseover='u(this,0x2b)'>  +  </td><td onmouseover='u(this,0x3b)'>  ;  </td><td onmouseover='u(this,0x4b)'>  K  </td><td onmouseover='u(this,0x5b)'>  [  </td><td onmouseover='u(this,0x6b)'>  k  </td><td onmouseover='u(this,0x7b)'>  (  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x0c)'>FF  ^L \f</td><td class='ctrl' onmouseover='u(this,0x1c)'>FS  ^\   </td><td onmouseover='u(this,0x2c)'>  ,  </td><td onmouseover='u(this,0x3c)'>&lt;</td ><td onmouseover='u(this,0x4c)'>  L  </td><td onmouseover='u(this,0x5c)'>  \  </td><td onmouseover='u(this,0x6c)'>  l  </td><td onmouseover='u(this,0x7c)'>  |  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x0d)'>CR  ^M \r</td><td class='ctrl' onmouseover='u(this,0x1d)'>GS  ^]   </td><td onmouseover='u(this,0x2d)'>  -  </td><td onmouseover='u(this,0x3d)'>  =  </td><td onmouseover='u(this,0x4d)'>  M  </td><td onmouseover='u(this,0x5d)'>  ]  </td><td onmouseover='u(this,0x6d)'>  m  </td><td onmouseover='u(this,0x7d)'>  )  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x0e)'>SO  ^N   </td><td class='ctrl' onmouseover='u(this,0x1e)'>RS  ^^   </td><td onmouseover='u(this,0x2e)'>  .  </td><td onmouseover='u(this,0x3e)'>&gt;</td ><td onmouseover='u(this,0x4e)'>  N  </td><td onmouseover='u(this,0x5e)'>  ^  </td><td onmouseover='u(this,0x6e)'>  n  </td><td onmouseover='u(this,0x7e)'>  ~  </td></tr>
+<tr><td class='ctrl' onmouseover='u(this,0x0f)'>SI  ^O   </td><td class='ctrl' onmouseover='u(this,0x1f)'>US  ^_   </td><td onmouseover='u(this,0x2f)'>  /  </td><td onmouseover='u(this,0x3f)'>  ?  </td><td onmouseover='u(this,0x4f)'>  O  </td><td onmouseover='u(this,0x5f)'>  _  </td><td onmouseover='u(this,0x6f)'>  o  </td><td onmouseover='u(this,0x7f)'> DEL </td></tr>
+</table>
+
+<div>&nbsp;</div>
+
+<script>
+var last = document.getElementById('dec');
+</script>
+
+<div id='copy' class='fineprint'>&copy; 2014 FastnLight, LLC</div>
+
+
+
+    </article>
+  </div>
+  </body>
+</html>
