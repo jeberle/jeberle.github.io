@@ -242,7 +242,7 @@ title: Characters
 
 `⌽` Power
 
-![keyshorts.png](chars/keyshorts.png)
+![keyshorts.png](img-chars/keyshorts.png)
 
-https://keyshorts.com/blogs/blog/41999105-the-ultimate-guide-to-macbook-keyboard
+<https://keyshorts.com/blogs/blog/41999105-the-ultimate-guide-to-macbook-keyboard>
 
