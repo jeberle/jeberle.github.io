@@ -13,8 +13,8 @@
 
 #title: "Some Website" # defaults to repo name, seen in <title> and page header
 #email: your-email@example.com
-description: >-
-  Just a rando website
+#description: >-
+#  Just a rando website
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
