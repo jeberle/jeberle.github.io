@@ -1,8 +1,8 @@
 ---
-title: Rando Website
+title: Index
 ---
 
-# Rando Pages & Links
+# Index
 
 - [Characters](chars.html)
 - [Excel Keys](excel-keys.html)
