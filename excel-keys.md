@@ -1,77 +1,76 @@
-= Excel Keys
-:experimental:
+# Excel Keys
 
-== Selection
+## Selection
 
-kbd:[Sh+<Space>]:  Select Row / Table Row
+`Sh+<Space>`:  Select Row / Table Row
 
-kbd:[Ctrl+<Space>]: Select Column / Table Column
+`Ctrl+<Space>`: Select Column / Table Column
 
-kbd:[Ctrl+<Star>]: Select contiguous cells
+`Ctrl+<Star>`: Select contiguous cells
 
-== Worksheet Edits
+## Worksheet Edits
 
-kbd:[Cmd+<Plus>]: Insert Cells, Rows, Cols (quantity of whatever is selected)
+`Cmd+<Plus>`: Insert Cells, Rows, Cols (quantity of whatever is selected)
 
-kbd:[Cmd+<Minus>]: Delete Cells, Rows, Cols (whatever is selected)
+`Cmd+<Minus>`: Delete Cells, Rows, Cols (whatever is selected)
 
-== Navigation / UI
+## Navigation / UI
 
-kbd:[Ctrl+<Up, Down, Left, Right>]: Go to next boundary of continguous cells
+`Ctrl+<Up, Down, Left, Right>`: Go to next boundary of continguous cells
 
-kbd:[Ctrl+<Home>]: Go to top-left corner
+`Ctrl+<Home>`: Go to top-left corner
 
-kbd:[Ctrl+<End>]: Go to bottom-right corner (outermost modified cell)
+`Ctrl+<End>`: Go to bottom-right corner (outermost modified cell)
 
-kbd:[Opt+Cmd+R]: Toggle Ribbon
+`Opt+Cmd+R`: Toggle Ribbon
 
-kbd:[Opt+Left / Right]: Switch to Prev / Next Worksheet Tab
+`Opt+Left / Right`: Switch to Prev / Next Worksheet Tab
 
-kbd:[Ctrl+F]: Find
+`Ctrl+F`: Find
 
-== Values / Formulas
+## Values / Formulas
 
-kbd:[F2]:  Edit cell contents
+`F2`:  Edit cell contents
 
-kbd:[Cmd+D]: Fill (or copy) down
+`Cmd+D`: Fill (or copy) down
 
-kbd:[Cmd+R]: Copy Right
+`Cmd+R`: Copy Right
 
-kbd:[Sh+F3]: Formula Builder 
+`Sh+F3`: Formula Builder 
 
-kbd:[Opt+Cmd+<Equals>]: Autosum
+`Opt+Cmd+<Equals>`: Autosum
 
-kbd:[Ctrl+<Semi>]: Insert current date
+`Ctrl+<Semi>`: Insert current date
 
-== Edit Mode
+## Edit Mode
 
-kbd:[F2]: Toggle between Point and Edit mode
+`F2`: Toggle between Point and Edit mode
 
-kbd:[F4 / Cmd+T]: Cycle through Absolute, AbsRow, AbsCol, Relative addressing
+`F4 / Cmd+T`: Cycle through Absolute, AbsRow, AbsCol, Relative addressing
 
-kbd:[Cmd+R]: Align Right
+`Cmd+R`: Align Right
 
-kbd:[Tab]: Tab-complete selection drop-down
+`Tab`: Tab-complete selection drop-down
 
-== Tables
+## Tables
 
-kbd:[Cmd+T]: Create Table
+`Cmd+T`: Create Table
 
-kbd:[Sh+Ctrl+L]: Toggle Table Filter buttons
+`Sh+Ctrl+L`: Toggle Table Filter buttons
 
-== Names
+## Names
 
 Name columns, ranges, as well as cells. They work like worksheet-level Table refs
 
-kbd:[Ctrl+G / F5]: Goto Name
+`Ctrl+G / F5`: Goto Name
 
-kbd:[F3]: Paste Name 
+`F3`: Paste Name 
 
-kbd:[Cmd+F3]: Name Manager
+`Cmd+F3`: Name Manager
 
 menu:Insert[Name > Define Name...]
 
-== Various
+## Various
 
 - Right drag corner for options on fill
 - Paste Special: Add -> adds value from clipboard to paste range
@@ -79,4 +78,5 @@ menu:Insert[Name > Define Name...]
 - Select range, enter 1st value, Shift-enter to fill all cells w/ value
 - Use `INDEX` & `MATCH` instead of `VLOOKUP`, `HLOOKUP`
 
-https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f[Keyboard shortcuts in Excel]
+[Keyboard shortcuts in Excel](https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f)
+
