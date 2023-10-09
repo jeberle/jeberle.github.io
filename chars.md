@@ -1,3 +1,7 @@
+---
+title: Characters
+---
+
 # Characters
 
 ## Typography
