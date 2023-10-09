@@ -22,8 +22,12 @@
 
 # Build settings
 #theme: minima
-#plugins:
-#  - jekyll-feed
+
+# this _is_ the default theme used by GitHub pages, locally at:
+#   /usr/local/lib/ruby/gems/3.2.0/gems/jekyll-theme-primer-0.6.0/
+remote_theme: pages-themes/primer@v0.6.0
+plugins:
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
