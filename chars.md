@@ -164,7 +164,7 @@ title: Characters
 
 [Mathematical Operators (Unicode block)](https://en.wikipedia.org/wiki/Mathematical_Operators_(Unicode_block))
 
-[Number_Forms](https://en.wikipedia.org/wiki/Number_Forms)
+[Number Forms](https://en.wikipedia.org/wiki/Number_Forms)
 
 `º` Degrees, `Opt-0`, looks like `0`
 
@@ -241,8 +241,6 @@ title: Characters
 `⏏` Eject
 
 `⌽` Power
-
-![keyshorts.png](img-chars/keyshorts.png)
 
 <https://keyshorts.com/blogs/blog/41999105-the-ultimate-guide-to-macbook-keyboard>
 
