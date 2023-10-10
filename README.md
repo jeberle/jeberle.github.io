@@ -79,3 +79,26 @@ bundle add webrick
 bundle exec jekyll serve --livereload
 ```
 
+#### Resolve GitHub Metadata Access
+
+Make sure the following vars in `_config.yml` are set:
+
+```yaml
+# set these to deactivate metadata lookup
+github:      []
+title:       "jeberle.github.io"
+description: ""
+url:         "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl:     "" # the subpath of your site, e.g. /blog
+```
+
+For actual lookup (and to resolve the **GitHub Auth** warning), create a GitHub token here
+<https://github.com/settings/tokens>.
+The only required auth is "access to public repos". Then:
+
+```shell
+export JEKYLL_GITHUB_TOKEN='<token-string>'
+```
+
+The plugin is part of github-pages and so is baked in.
+<https://jekyll.github.io/github-metadata/>
