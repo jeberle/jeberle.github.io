@@ -8,18 +8,20 @@ See also:
 [Creating your site](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site)
 on GitHub.
 
-#### Install Up-to-date Ruby
+#### Install Specific Ruby Version (3.2)
 
 ```shell
-brew install ruby
+brew install ruby@3.2
 ```
 
 #### Update `PATH` Variable
 
-Add `/usr/local/opt/ruby/bin` before `/usr/bin`
+Add `/usr/local/opt/ruby@3.2/bin` and `/usr/local/lib/ruby/gems/3.2.0/bin` before `/usr/bin`
 
 ```shell
-PATH=/usr/local/bin:/usr/local/opt/ruby/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin
+rbin=/usr/local/opt/ruby@3.2/bin
+gbin=/usr/local/lib/ruby/gems/3.2.0/bin
+PATH=/usr/local/bin:$rbin:$gbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin
 ```
 
 ```shell
@@ -51,7 +53,7 @@ These changes are for GitHub Pages. The current version of `github-pages` is at
 
 ```yaml
 #gem "jekyll", "~> 4.3.2"
-gem "github-pages", "~> 228", group: :jekyll_plugins
+gem "github-pages", "~> 231", group: :jekyll_plugins
 ```
 
 #### Download Gems
@@ -76,7 +78,8 @@ plugins:
 
 ```shell
 bundle add webrick
-bundle exec jekyll serve --livereload
+rlib=/usr/local/opt/ruby@3.2/lib
+DYLD_LIBRARY_PATH=$rlib bundle exec jekyll serve --livereload
 ```
 
 #### Resolve GitHub Metadata Access
