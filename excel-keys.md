@@ -18,13 +18,15 @@ title: Excel Keys
 
 `Cmd-<Minus>`: Delete Cells, Rows, Cols (whatever is selected)
 
-## Navigation / UI
+## Scrolling / Navigation / UI
 
-`Ctrl-<Up, Down, Left, Right>`: Go to next boundary of continguous cells
+`Ctrl-<Up, Down, Left, Right>`: Go to next boundary of contiguous cells
 
 `Ctrl-<Home>`: Go to top-left corner
 
 `Ctrl-<End>`: Go to bottom-right corner (outermost modified cell)
+
+`Opt-<PageUp, PageDown>`: Move one screen left / right
 
 `Opt-Cmd-R`: Toggle Ribbon
 
