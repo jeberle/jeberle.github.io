@@ -12,6 +12,10 @@ title: Excel Keys
 
 `Ctrl-<Star>`: Select contiguous cells
 
+`F8`: Select mode
+
+`Sh-F8`: Add select
+
 ## Worksheet Edits
 
 `Cmd-<Plus>`: Insert Cells, Rows, Cols (quantity of whatever is selected)
@@ -72,11 +76,47 @@ Name columns, ranges, as well as cells. They work like worksheet-level Table ref
 
 `F3`: Paste Name
 
-`Cmd-F3`: Name Manager
+`Ctrl-L`: Define name
+
+`Cmd-F3`: Define Name dialog
+
+`Sh-Cmd-F3`: Create Names dialog
 
 `Insert > Name > Define Name...`
 
+## Cell Format
+
+`Ctrl-1`: Format Cells dialog
+
+`Ctrl-~`: General Format
+
+`Ctrl-!`: Number Format: 0,000.00
+
+`Ctrl-@`: Time Format
+
+`Ctrl-#`: Date Format
+
+`Ctrl-$`: Currency Format
+
+`Ctrl-%`: Percentage Format
+
 ## Various
+
+`Ctrl-Cmd-V`: Paste Special
+
+`Ctrl-E`: Flash fill
+
+`Sh-F10`: Context menu
+
+## Select References
+
+`Ctrl-[`: Select only cells that are directly referred to by formulas in the selection
+
+`Ctrl-{`: Select all cells that are directly or indirectly referred to by formulas in the selection
+
+`Ctrl-]`: Select only cells with formulas that refer directly to the active cell
+
+`Ctrl-}`: Select all cells with formulas that refer directly or indirectly to the active cell
 
 - Right drag corner for options on fill
 - `Edit > Paste Special`: `Add` adds value from clipboard to paste range
